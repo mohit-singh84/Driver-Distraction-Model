@@ -6,8 +6,9 @@ After mentioning the feature extractors, we are using three dense layers. The ge
 to run the model use following code 
 
 new_model = tf.keras.models.load_model('best_driver_distraction_model.h5')
-
 new_model.summary()
+
+model.compile(optimizer = Adam(learning_rate = 0.007654901613872424), loss = 'categorical_crossentropy', metrics = ['acc'])
 
 now you can perform any .evaluate() or .fit() on the loaded model
 
